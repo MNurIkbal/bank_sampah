@@ -51,7 +51,7 @@
             <!-- <input type="text" class="form-control" name="level" id="level" placeholder="Level" value="<?php echo $level; ?>" /> -->
             <select class="form-control show-tick" name="level">
                 <option value="<?php echo $level ?>"><?php echo $level ?></option>
-                <option value="admin">admin</option>
+                <!-- <option value="admin">admin</option> -->
                 <option value="operator">operator</option>
             </select>
         </div>

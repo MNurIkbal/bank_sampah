@@ -41,6 +41,7 @@
         <th>Action</th>
     </tr><?php
             foreach ($user_data as $user) {
+                if($user->level == "admin") :
             ?>
         <tr>
             <td width="80px"><?php echo ++$start ?></td>
@@ -59,7 +60,7 @@
             </td>
         </tr>
     <?php
-            
+            endif;
             }
     ?>
 </table>

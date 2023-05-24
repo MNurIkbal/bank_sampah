@@ -32,7 +32,7 @@
 <table class="table table-bordered" style="margin-bottom: 10px">
     <tr>
         <th>No</th>
-        <th>Nama Users</th>
+        <th>Nama User</th>
         <th>Username</th>
         <th>Email</th>
         <th>Foto User</th>
@@ -41,6 +41,7 @@
         <th>Action</th>
     </tr><?php
             foreach ($user_data as $user) {
+                if($user->level == "operator") :
             ?>
         <tr>
             <td width="80px"><?php echo ++$start ?></td>
@@ -59,6 +60,7 @@
             </td>
         </tr>
     <?php
+    endif;
             }
     ?>
 </table>
