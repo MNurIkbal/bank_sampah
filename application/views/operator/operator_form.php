@@ -26,8 +26,7 @@
     <div class="form-group">
         <div class="form-line">
             <label for="varchar">Foto User </label>
-            <input type="file" class="form-control" name="foto_user" id="foto_user" />
-
+            <input type="file" class="form-control" name="foto_user" id="foto_user">
         </div>
         <?php
         if ($foto_user !== '') {
