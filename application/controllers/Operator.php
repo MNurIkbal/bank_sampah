@@ -82,7 +82,7 @@ class Operator extends CI_Controller
             'foto_user' => set_value('foto_user'),
             'level' => set_value('level'),
             'jabatan' => set_value('jabatan'),
-            'konten' => 'user/user_form',
+            'konten' => 'operator/operator_form',
             'judul' => 'Data User',
         );
         $this->load->view('v_index', $data);
