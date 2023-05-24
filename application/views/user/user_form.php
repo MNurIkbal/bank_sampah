@@ -50,11 +50,8 @@
             <label for="varchar">Level </label>
             <select class="form-control show-tick" name="level">
                 <option value="">Pilih</option>
-                <?php if($this->session->userdata('level') == "admin") : ?>
-                    <option value="admin" <?= ($level == "admin") ? "selected" : ""; ?>>Admin</option>
-                    <?php else: ?>
-                        <option value="operator" <?= ($level == "operator") ? "selected" : ""; ?>>Operator</option>
-                    <?php endif; ?>
+                        <!-- <option value="operator" <?= ($level == "operator") ? "selected" : ""; ?>>Operator</option> -->
+                        <option value="admin" <?= ($level == "admin") ? "selected" : ""; ?>>Admin</option>
             </select>
         </div>
     </div>
