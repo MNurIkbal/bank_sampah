@@ -64,6 +64,7 @@
             <li><a href="" target="_blank"><i class="fa fa-circle-o"></i> <span>Laporan Data Penjualan</span></a></li>
           </ul>
         </li>
+        <li><a href="<?= base_url('operator'); ?>"><i class="fa fa-user"></i> <span>Data Operator</span></a></li>
         <li><a href="<?= base_url('anggota'); ?>"><i class="fa fa-user"></i> <span>Data Nasabah</span></a></li>
         <li><a href="<?= base_url('user'); ?>"><i class="fa fa-user"></i> <span>Data Administrator</span></a></li>
 

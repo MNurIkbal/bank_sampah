@@ -31,7 +31,7 @@ class Operator extends CI_Controller
         $config['per_page'] = 10;
         $config['page_query_string'] = TRUE;
         $config['total_rows'] = $this->User_model->total_rows($q);
-        $user = $this->User_model->get_limit_data($config['per_page'], $start, $q);
+        $user = $this->User_model->get_limit_data_operator($config['per_page'], $start, $q);
 
         $this->load->library('pagination');
         $this->pagination->initialize($config);
@@ -42,7 +42,7 @@ class Operator extends CI_Controller
             'pagination' => $this->pagination->create_links(),
             'total_rows' => $config['total_rows'],
             'start' => $start,
-            'konten' => 'user/user_list',
+            'konten' => 'operator/operator_list',
             'judul' => 'Data User',
         );
         $this->load->view('v_index', $data);

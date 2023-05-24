@@ -56,6 +56,20 @@ class User_model extends CI_Model
         return $this->db->get($this->table)->result();
     }
 
+    function get_limit_data_operator($limit, $start = 0, $q = NULL) {
+        $this->db->where('level', 'operator');
+        $this->db->order_by($this->id, $this->order);
+        $this->db->like('id_user', $q);
+	$this->db->or_like('nama_user', $q);
+	$this->db->or_like('username', $q);
+	$this->db->or_like('password', $q);
+	$this->db->or_like('email', $q);
+	$this->db->or_like('foto_user', $q);
+	$this->db->or_like('level', $q);
+	$this->db->limit($limit, $start);
+        return $this->db->get($this->table)->result();
+    }
+
     // insert data
     function insert($data)
     {

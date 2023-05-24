@@ -32,7 +32,7 @@
 <table class="table table-bordered" style="margin-bottom: 10px">
     <tr>
         <th>No</th>
-        <th>Nama User</th>
+        <th>Nama Users</th>
         <th>Username</th>
         <th>Email</th>
         <th>Foto User</th>
