@@ -53,7 +53,7 @@
             <td><?php echo $user->jabatan ?></td>
             <td style="text-align:center" width="200px">
                 <?php
-                echo anchor(site_url('user/update/' . $user->id_user), '<button class="btn btn-sm btn-info"><i class="fa fa-pencil"></i></button>');
+                echo anchor(site_url('operator/update/' . $user->id_user), '<button class="btn btn-sm btn-info"><i class="fa fa-pencil"></i></button>');
                 echo ' | ';
                 echo anchor(site_url('user/delete/' . $user->id_user), '<button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button>', 'onclick="javasciprt: return confirm(\'Yakin Hapus ?\')"');
                 ?>

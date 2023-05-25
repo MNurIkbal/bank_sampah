@@ -84,6 +84,7 @@ class Operator extends CI_Controller
             'jabatan' => set_value('jabatan'),
             'konten' => 'operator/operator_form',
             'judul' => 'Data User',
+            'operator'  =>  true,
         );
         $this->load->view('v_index', $data);
     }
@@ -126,7 +127,6 @@ class Operator extends CI_Controller
     public function update($id)
     {
         $row = $this->User_model->get_by_id($id);
-
         if ($row) {
             $data = array(
                 'button' => 'Update',
@@ -139,8 +139,9 @@ class Operator extends CI_Controller
                 'foto_user' => set_value('foto_user', $row->foto_user),
                 'level' => set_value('level', $row->level),
                 'jabatan' => set_value('jabatan', $row->jabatan),
-                'konten' => 'user/user_form',
+                'konten' => 'operator/operator_form',
                 'judul' => 'Data User',
+                'operator'  =>  true,
             );
             $this->load->view('v_index', $data);
         } else {

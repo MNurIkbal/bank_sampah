@@ -121,7 +121,13 @@ class User extends CI_Controller
 
             $this->User_model->insert($data);
             $this->session->set_flashdata('message');
-            redirect(site_url('user'));
+            $opertor = $this->input->post('type');
+            if(isset($opertor)) {
+                redirect(site_url('operator'));
+            } else {
+                redirect(site_url('user'));
+
+            }
         }
     }
 
@@ -198,7 +204,12 @@ class User extends CI_Controller
 
                 $this->User_model->update($this->input->post('id_user', TRUE), $data);
                 $this->session->set_flashdata('message');
-                redirect(site_url('user'));
+                $operator = $this->input->post('type');
+                if(isset($operator)) {
+                    redirect(site_url('operator'));
+                } else {
+                    redirect(site_url('user'));
+                }
             }
         }
     }
